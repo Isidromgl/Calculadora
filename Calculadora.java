@@ -20,7 +20,10 @@ public class Calculadora {
 	        switch(operacion){
 	            case "sumar":
 	                System.out.println("Suma: "+sumar(x,y));
-	                break;}
+	            case "multiplicar":
+	                System.out.println("Multi: "+multiplicar(x,y));
+	                
+	        }
 	         
 	}
 		    
@@ -29,6 +32,9 @@ public class Calculadora {
 		return s;
 	}
 	
+	public static int multiplicar(int a, int b){
+		 int s=a*b;
+		 return s;}
 	
  }
 
