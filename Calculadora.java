@@ -7,7 +7,7 @@ public class Calculadora {
 
 	private static Scanner sc;
 	public static void main(String[] args) {
-		  int x,y;
+		double x,y;
 		  sc = new Scanner(System.in);
 		  String operacion;
 		  System.out.println("Numero 1:");
@@ -22,19 +22,36 @@ public class Calculadora {
 	                System.out.println("Suma: "+sumar(x,y));
 	            case "multiplicar":
 	                System.out.println("Multi: "+multiplicar(x,y));
+	            case "restar":
+	                System.out.println("Restar: "+restar(x,y));
 	                
 	        }
 	         
 	}
 		    
-	public static int sumar(int a, int b){
-		int s=a+b;
+	public static double sumar(double a, double b){
+		double s=a+b;
 		return s;
 	}
 	
-	public static int multiplicar(int a, int b){
-		 int s=a*b;
+	public static double multiplicar(double a, double b){
+		double s=a*b;
 		 return s;}
+	
+	public static double restar(double a, double b){
+		double s=a-b;
+		
+		if (Double.isNaN(s)){
+			
+			System.out.println("Se puede restar");
+			
+		}else{
+			System.out.println("No se puede restar");
+		}
+		 return s;
+	}
+	
+
 	
  }
 
